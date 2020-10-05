@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="file:///G:/UI/UI_Coding/fontawesome-free-5.13.0-web/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+	<title>Bakes-Main</title>
+	<style>
+		body{
+			background-image: url("file:///G:/UI/UI_Coding/4_Bootstrap/project/img/wall1.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		.heading{
+			font-family: 'Lobster', cursive;
+			text-decoration: none;
+			overflow: hidden;
+		}
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-decoration: none;
+			color: black;
+		}
+		a:active{
+			text-decoration: none;
+			color: black;
+		}
+		.about{
+			background-color: rgba(0,0,0,0.2);
+		}
+		.card:hover{
+			transform: scale(1.08);
+			transition-duration: .5s;
+		}
+		hr.line{
+			border:0.1px solid #494949;
+		}
+		.footer{
+			color: #494949;
+		}
+	</style>
+</head>
+<body onload="user()">
+	<!--HEADING-->
+	<div class="container heading  clearfit my-4">
+		<span class="display-4 float-left">
+			<a href="home.html">Home Bakes</a>
+		</span>
+		<span class="float-right mt-4">
+			<p class="lead">Taste of Mom made Bake</p>
+		</span>
+	</div>
+	<!--HEADING END-->
+
+	<!--WARNING-->
+	<div class="mx-auto alert w-50 alert-warning alert-dismissible">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<p><strong>Note :</strong> This baking site is only for NEST Apartments,Manikonda</p>
+	</div>
+	<!--WARNING END-->
+
+	<!--NAVBAR-->
+	<div class=" ">
+		<nav class="navbar navbar-expand bg-warning navbar-light mb-5 sticky-top">	
+			<!--NAVBAR BRAND-->
+			<a href="main.html" class="navbar-brand ml-3">Bake</a>
+			<!--NAVBAR BRAND END-->
+
+			<!--NAVBAR ITEMS-->
+			<ul class="navbar-nav w-50 mx-5">
+				<li class="nav-item dropdown mx-2">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">
+						<span class="fas fa-birthday-cake mr-2"></span>Cake</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item" href="cakeor.html" >Cakes</a>
+						<a class="dropdown-item" href="ccor.html" >Cupcakes</a>
+						<a class="dropdown-item" href="#" >Customized Cakes</a>
+					</div>
+				</li>
+				<li class="nav-item mx-2">
+					<a class="nav-link" href="biscuit.html">
+						<span class="fas fa-cookie-bite mr-1"></span> Biscuits
+					</a>
+				</li>
+				<li class="nav-item mx-2">
+					<a class="nav-link" href="cp.html">
+						<span class="fas fa-candy-cane mr-1"></span> Chocolates
+					</a>
+				</li>
+				<li class="nav-item mx-2">
+					<a class="nav-link" href="gallery.html">
+						<span class="fas fa-images mr-1"></span>Gallery
+					</a>
+				</li>
+			</ul>
+			<!--NAVBAR RIGHT-->
+				<ul class="navbar-nav w-25">
+					<li class="nav-item float-right mx-1" >
+						<a href="#" class="nav-link inactive" data-toggle="modal" data-target="#phmodal" title="Click to known Number">
+							<span class="fas fa-phone"></span>
+						</a>
+					</li>
+					<li class="nav-item mx-1">
+						<a href="#" class="nav-link" data-toggle="tooltip" data-placement="bottom" trigger="focus" title="@gmail.com">
+							<span class="fas fa-envelope"></span>
+						</a>
+					</li>
+					<li class="nav-item mx-1">
+						<a href="https://www.facebook.com/search/top/?q=the%20prasanna%27s%20kitchen" target="_blank" class="nav-link" data-toggle="tooltip" data-placement="bottom" trigger="focus" title="Facebook">
+							<span class="fab fa-facebook-f"></span>
+						</a>
+					</li>
+					<li class="nav-item mx-1">
+						<a href="https://www.instagram.com/theprasannaskitchen/" target="_blank" class="nav-link" data-toggle="tooltip" data-placement="bottom" trigger="focus" title="instagram">
+							<span class="fab fa-instagram"></span>
+						</a>
+					</li>
+					<li class="nav-item mx-1">
+						<a href="#" class="nav-link" data-toggle="modal" data-target="#wtappmodal" title="Cilck to known Number">
+							<span class="fab fa-whatsapp"></span>
+						</a>
+					</li>
+					<!--CART-->
+					<li class="nav-item ml-5">
+						<a href="#" class="nav-link" data-toggle="tooltip" data-placement="bottom" trigger="focus" title="Wishlist">
+							<span class="fas fa-heart"></span>
+						</a>
+					</li>
+					<li class="nav-item mx-1">
+						<a href="#" class="nav-link" data-toggle="tooltip" data-placement="bottom" trigger="focus" title="Cart">
+							<span class="fas fa-shopping-cart"></span>
+						</a>
+					</li>
+					<!--CART END-->
+					<!--PROFILE ICON-->
+					<li class="nav-item dropdown dropleft mx-1">
+						<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+							<span class="fas fa-user"></span>
+							<div class="dropdown-menu dropdown-menu-sm">
+								<a href="#" class="dropdown-item">my profile</a>
+								<a href="#" class="dropdown-item">Wishlist</a>
+								<a href="#" class="dropdown-item">Orders</a>
+								<a href="#" class="dropdown-item">Settings</a>
+								<p class="dropdown-divider"></p>
+								<p class="dropdown-item-text" id="userId">User</p>
+								<a href="newlogin.html" class="dropdown-item">Log-out</a>
+							</div>
+						</a>
+					</li>
+					<!--PROFILE ICON ENd-->
+				</ul>
+				<!--NAVBAR RIGHT-->
+			<!--NAVBAR ITEMS END-->
+		</nav>
+	</a>
+	<!--NAVBAR END-->
+
+	<!--ABOUT SECTION-->
+	<div class="container about py-3  my-3 rounded">
+		<p class="display-4 text-dark">Home Bakes</p>
+		<p class="lead ml-5">This site is for Online ordering <strong>Bake products</strong></p>
+		<p class="lead ml-5">All food products are made at home</p>
+	</div>
+	<!--ABOUT SECTION END-->
+
+	<!--CARD-->
+	<div class="container">
+		<div class="row">
+			<!--CARD ONE-->
+			<div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-2">
+				<div class="card shadow">
+					<img src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cake/cake18.PNG" alt="Cake" class="card-img-top" width="200" height="250">
+					<div class="card-body">
+						<p class="card-title text-secondary font-italic">Cakes</p>
+						<a href="cakeor.html" class="btn btn-sm btn-outline-success">Order</a>
+					</div>
+					<div class="card-footer  d-flex justify-content-around">
+						<a href="#"><i class="fab fa-facebook-f text-primary"></i></a>
+						<a href="#"><i class="fab fa-instagram text-danger"></i></a>
+						<a href="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cake/cake18.PNG"><i class="fas fa-image text-success"></i></a>
+					</div>
+				</div>
+			</div>
+			<!--CARD ONE ENDS-->
+
+			<!--CARD TWO-->
+			<div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-2">
+				<div class="card shadow">
+					<img src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc16.PNG" alt="cupcake" class="card-img-top" width="200" height="250">
+					<div class="card-body">
+						<p class="card-title text-secondary font-italic">Cupcakes</p>
+						<a href="ccor.html" class="btn btn-sm btn-outline-success">Order</a>
+					</div>	
+					<div class="card-footer d-flex justify-content-around">
+						<a href="#"><i class="fab fa-facebook-f text-primary"></i></a>
+						<a href="#"><i class="fab fa-instagram text-danger"></i></a>
+						<a href="file:///G:/UI/UI_Coding/4_Bootstrap/project/pic/cupcake1.PNG" download>
+							<i class="fas fa-image text-success"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CARD TWO ENDS-->
+
+			<!--CARD THREE-->
+			<div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-2">
+				<div class="card shadow">
+					<img src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/donut/c1.jpeg" alt="snack" class="card-img-top" width="200" height="250">
+					<div class="card-body">
+						<p class="card-title text-secondary font-italic">Chocolates</p>
+						<a href="#" class="btn btn-sm btn-outline-success">Order</a>
+					</div>
+					<div class="card-footer d-flex justify-content-around">
+						<a href="#"><i class="fab fa-facebook-f text-primary"></i></a>
+						<a href="#"><i class="fas fa-image text-danger"></i></a>
+						<a href="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/donut/c1.jpeg"><i class="fas fa-image text-success"></i></a>
+					</div>
+				</div>
+			</div>
+			<!--CARD THREE ENDS-->
+
+			<!--CARD FOUR-->
+			<div class="col-6 col-md-6 col-lg-4 col-xl-3 mb-2">
+				<div class="card shadow">
+					<img src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/bisc/biscuit1.PNG" alt="Biscuit" class="card-img-top" width="200" height="250">
+					<div class="card-body">
+						<p class="card-title text-secondary font-italic">Biscuits</p>
+						<a href="biscuit.html" class="btn btn-sm btn-outline-success">Order</a>
+					</div>
+					<div class="card-footer d-flex justify-content-around">
+						<a href="#"><i class="fab fa-facebook-f text-primary"></i></a>
+						<a href="#"><i class="fab fa-instagram text-danger"></i></a>
+						<a href="file:///G:/UI/UI_Coding/4_Bootstrap/project/pic/biscuit1.PNG"><i class="fas fa-image text-success"></i></a>
+					</div>
+				</div>
+			</div>
+			<!--CARD FOUR ENDS-->
+
+		</div>
+	</div>
+	<!--CARD END-->
+
+	<!-- Phno Modal Start -->
+	<div id="phmodal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+    		<!-- Modal content-->
+    		<div class="modal-content">
+      			<div class="modal-body">
+        			<p class="lead">Phone Number</p>
+        			<p class="font-italic">Prassana(Bake Maker)</p>
+        			<p class="font-italic">9980213333</p>
+        			<button type="button" class="btn btn-sm btn-danger float-right" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<div id="wtappmodal" class="modal fade" role="dialog">
+  		<div class="modal-dialog">
+    		<!-- Modal content-->
+    		<div class="modal-content">
+      			<div class="modal-body">
+        			<p class="lead">Whatsapp Number</p>
+        			<p class="font-italic">Prassana(Bake Maker)</p>
+        			<p class="font-italic">9980213333</p>
+        			<button type="button" class="btn btn-sm btn-danger float-right" data-dismiss="modal">Close</button>
+      			</div>
+    		</div>
+  		</div>
+	</div>
+	<!-- Phno Modal End -->
+
+
+	<!--Footer Section-->
+	<hr class="line">
+	<div class="text-center footer">
+		<p class="small mb-0">Copyrights<span class="far fa-copyright"></span> and Developed by Bhanuprakash</p>
+		<p class="small mt-0">From 2020</p>
+	</div>
+	<!--Footer Section End-->
+
+	<!-- JAVASCRIPT START -->
+
+	<!-- MAIN SCRIPT START -->
+	<script>
+		function user(){
+			var data = localStorage.getItem('login');
+			var fdata = JSON.parse(data);
+			document.getElementById('userId').innerHTML=fdata['User'];
+			console.log(fdata);
+		}	
+	</script>
+	<!-- MAIN SCRIPT END -->
+
+	<!--POPOVER SCRIPT-->
+	<script>
+		$(document).ready(function(){
+  			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+	<!--POPOVER SCRIPT-->
+
+	<!-- JAVSCRIPT END -->
+</body>
+</html>

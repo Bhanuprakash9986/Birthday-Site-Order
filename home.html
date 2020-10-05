@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="file:///G:/UI/UI_Coding/fontawesome-free-5.13.0-web/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lobster&display=swap" rel="stylesheet">
+	<title>Home Bakes</title>
+	<style>
+		body{
+			background-image: url("file:///G:/UI/UI_Coding/4_Bootstrap/project/img/cake2.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: fixed;
+			background-attachment: fixed;
+
+		}
+		.heading{
+			font-family: 'Lobster', cursive;
+			text-decoration: underline;
+			color: white;
+		}
+		a:link{
+			text-decoration: none;
+			color: white;
+		}
+		a:visited{
+			text-decoration: none;
+			color: white;
+		}
+		a:hover{
+			text-decoration: none;
+			color: white;
+		}
+		a:active{
+			text-decoration: none;
+			color: white;
+		}
+		.form{
+			background-color: rgba(0,0,0,0.6);
+		}
+		.avatar{
+			border-radius: 50%;
+			height: 70px;
+			width: 70px;
+		}
+		#aimg{
+			border-radius: 50%;
+			opacity: 0.7;
+		}
+		.control-label{
+			font-family: 'Amiri', serif;
+		}
+		#idchck,#psschck,#mailchck{
+			outline: none;
+			color: white;
+			border-style: solid;
+			border-color: white;
+			border-width: 2px;
+			padding: 3px 10px;
+			border-left: none;
+			border-right: none;
+			border-top: none;
+
+		}
+		.stuts{
+			background-color: rgba(0,255,55,0.5);
+			width: 25%;
+			margin-top: 1%;
+		}
+		.container{
+			height: 420px;
+		}
+		hr.line{
+			border:0.1px solid #494949;
+		}
+		.footer{
+			color: #494949;
+		}
+	</style>
+</head>
+<body>
+	<!--HEADING-->
+	<div class="text-center text-white display-4 heading">
+		<a href="home.html">Home Bakes</a>
+	</div>
+	<!--HEADING END-->
+	
+	<!--Register link-->
+	<div class="d-flex justify-content-end mr-5">
+		<a href="newlogin.html" class="btn btn-outline-light btn-sm">
+			<span class="fas fa-registered"></span> New Login
+		</a>
+	</div>
+	<!--Register link end-->
+	<!-- STUTS START -->
+	<p class="text-center text-white bg-danger lead mt-2" id="stuts"></p>
+	<p class="text-center text-white bg-success lead mt-2" id="fstuts"></p>
+	<!-- STUTS END -->
+	<!--LOGIN-->
+	<div class="container mt-5" >
+		<div class="d-flex justify-content-center  w-50 mx-auto">
+			<form action="main.html" onsubmit ="return login()" class="form-horizontal form pt-2 px-4 pb-4 rounded">
+				<!--AVATAR PART-->
+				<div class="avatar mx-auto bg-light ">
+					<img id="aimg" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/img/pimg.jpg" height="70" width="70">
+				</div>
+				<!--AVATAR PART END-->
+				<!--User id-->
+				<div class="form-group"> 
+					<div class="col mt-3">
+						<input type="text" id="idchck" placeholder="Enter UserId" class="form-control-plaintext txtpanel" required>
+					</div>
+				</div>
+				<!--User id End-->
+
+				<!-- Mail start -->
+				<div class="form-group"> 
+					<div class="col">
+						<input type="mail" id="mailchck" placeholder="Enter mail Id" class="form-control-plaintext txtpanel" required>
+					</div>
+				</div>
+				<!-- Mail end -->
+	
+				<!--Password-->
+				<div class="form-group">
+					<div class="col">
+						<input type="password" id="psschck" placeholder="Enter Password" class="form-control-plaintext txtpanel" required>						
+					</div>
+				</div>
+				<!--Password End-->
+	
+				<!--Button-->
+				<div class=" row mt-4">
+					<div class="col-md-6 col-sm-12">
+						<input type="submit" value="Submit"  class="btn btn-success w-100">
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<input type="reset" value="Reset" class="btn btn-warning w-100">
+					</div>
+				</div>
+				<!--Button End-->
+			</form>
+		</div>
+	</div>
+	<!--LOGIN END-->
+
+	<!--Footer Section-->
+	<hr class="line">
+	<div class="text-center footer">
+		<p class="small mb-0">Copyrights<span class="far fa-copyright"></span> and Developed by Bhanuprakash</p>
+		<p class="small mt-0">From 2020</p>
+	</div>
+	<!--Footer Section End-->
+
+	<!-- MAIN JAVASCRIPT START -->
+	<script>
+		function login(){
+			var luser = document.getElementById('idchck').value;
+			var lmail = document.getElementById('mailchck').value;
+			var lpss = document.getElementById('psschck').value;
+			var data = localStorage.getItem("newlogin");
+			var nameList=[];
+			var mailList=[];
+			var pssList=[];
+			var fdata = JSON.parse(data);
+			for(i=0 ; i<fdata.length ; i++){
+				nameList.push(fdata[i].Name);
+				mailList.push(fdata[i].Mail);
+				pssList.push(fdata[i].Pswrd);
+			}
+			var srchName = nameList.indexOf(luser);
+			var srchMail = mailList.indexOf(lmail);
+			var srchPss = pssList.indexOf(lpss);
+			// Storing login values Start
+			var obj = JSON.stringify({
+							"User" : luser ,
+							"Mail" : lmail ,
+							"Pswrd" : lpss
+						});
+			localStorage.setItem("login",obj);
+			// Storing login values End
+			if (srchName == -1 || srchMail == -1 || srchPss == -1) {
+				document.getElementById('stuts').innerHTML="Account NotFound";
+				return false;
+			}else{
+				document.getElementById('fstuts').innerHTML="Account Found";
+				return true;
+			}
+		}
+	</script>
+	<!-- MAIN JAVASCRIPT END -->
+
+</body>
+</html>

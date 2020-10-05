@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="file:///G:/UI/UI_Coding/fontawesome-free-5.13.0-web/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Cuprum:ital@1&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<title>Bakes-Bill</title>
+	<style>
+		body{
+			background-image: url("file:///G:/UI/UI_Coding/4_Bootstrap/project/img/wall2.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		.heading{
+			font-family: 'Lobster', cursive;
+			text-decoration: none;
+			overflow: hidden;
+		}
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-decoration: none;
+			color: black;
+		}
+		a:active{
+			text-decoration: none;
+			color: black;
+		}
+		.bill{
+			background-color: rgba(7, 126, 181,0.3);
+			margin-top: 1%;
+			width: 30%;
+		}
+		.thankyou{
+			background-color: rgba(68, 234, 118,0.5);
+			font-family: 'Playfair Display', serif;
+		}
+		.icon{
+			float: right;
+			margin-top: 1%; 
+			margin-right: 20%;
+			color: rgba(68, 234, 118,0.6);
+		}
+		.label{
+			font-family: 'Domine', serif;
+			padding-left:5%; 
+		}
+		.print{
+			font-family: 'Domine', serif;
+			padding-right: 5%;
+		}
+		hr.line{
+			border:0.1px solid #494949;
+		}
+		.footer{
+			color: #494949;
+		}
+	</style>
+</head>
+<body onload="order()">
+	<!--HEADING-->
+	<div class="container heading clearfit my-3">
+		<span class="display-4 float-left">
+			<a href="main.html" class="small" title="Home Page">
+				<span class="fas fa-home text-secondary p-2"></span>
+			</a>
+			<a href="order.html">
+				<span>Home Bakes-Order</span>
+			</a>
+		</span>
+		<span class="float-right mt-4">
+			<p class="lead">Taste of Mom made Bake</p>
+		</span>
+	</div>
+	<!--HEADING END-->
+
+	<!--Bill SECTION-->
+
+	<!-- Thank you Section start -->
+	<div class="container-fluid w-100  thankyou">
+		<div class="row">
+			<div class="col-6">
+				<p class="pt-1">Order Succuessfully Placed</p>
+				<p class="pb-1">Contact to Bake maker for order details</p>
+			</div>
+			<div class="col-6">
+				<p><i class="far fa-smile fa-4x icon"></i></p>
+			</div>
+		</div>
+	</div>
+	<!-- Thank you Section End -->
+
+	<!-- Bill Details start -->
+	<div class="container py-3 px-2 rounded bill">
+		<div class="row">
+			<div class="col-12 col-sm-6">
+				<p class="label">Customer Name :</p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="print" id="aname"></p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="label">Plot No :</p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="print" id="pname"></p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<p class="label">Phone :</p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<p class="print" id="cntct"></p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<p class="label">Cake File :</p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<p class="print" id="cfile"></p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="label">Quantity :</p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="print" id="qntity"></p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="label">Comment :</p>
+			</div>
+			<div class="col-12 col-sm-6">
+				<p class="print" id="cmmnt"></p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<p class="label">Price :</p>
+			</div>
+			<div class="col-12 col-lg-6">
+				<p class="print" id="price"></p>
+			</div>
+		</div>
+	</div>
+	<!--Bill SECTION END-->
+
+	<!--Footer Section-->
+	<hr class="line">
+	<div class="text-center footer">
+		<p class="small mb-0">Copyrights<span class="far fa-copyright"></span> and Developed by Bhanuprakash</p>
+		<p class="small mt-0">From 2020</p>
+	</div>
+	<!--Footer Section End-->
+
+	<!-- Script Section Start-->
+	<script>
+		function order(){
+			let data=localStorage.getItem('orDetail');
+			let dataParse=JSON.parse(data);
+			document.getElementById('aname').innerHTML=dataParse["Name"];
+			document.getElementById('pname').innerHTML=dataParse["Plotno"];
+			document.getElementById('cntct').innerHTML=dataParse["Phone"];
+			document.getElementById('cfile').innerHTML=dataParse["Cakefile"];
+			document.getElementById('qntity').innerHTML=dataParse["Quantity"];
+			document.getElementById('cmmnt').innerHTML=dataParse["Comment"];
+			document.getElementById('price').innerHTML=dataParse["Price"];
+
+		}
+	</script>
+	<!-- Script Section End -->
+
+</body>
+</html>

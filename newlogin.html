@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="file:///G:/UI/UI_Coding/fontawesome-free-5.13.0-web/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<title>Bakes-newlogin</title>
+	<style>
+		body{
+			background-image: url("file:///G:/UI/UI_Coding/4_Bootstrap/project/img/cake2.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+			
+		}
+		.heading{
+			font-family: 'Lobster', cursive;
+			text-decoration: underline;
+		}
+		a:link{
+			text-decoration: none;
+			color: white;
+		}
+		a:visited{
+			text-decoration: none;
+			color: white;
+		}
+		a:hover{
+			text-decoration: none;
+			color: white;
+		}
+		a:active{
+			text-decoration: none;
+			color: white;
+		}
+		.sign{
+			font-family: 'Roboto', sans-serif;
+			font-size: 20px;
+		}
+		.status{
+			width: 25%;
+			margin-top: 1%;
+		}
+		.form{
+			background-color: rgba(0,0,0,0.5);
+			width: 88%;
+			margin-top: 2%;
+			margin-bottom: 1%;
+		}
+		.control-label{
+			font-family: 'Amiri', serif;
+			color: white;
+		}
+		.container{
+			height: auto;
+
+		}
+		hr.line{
+			border:0.1px solid #494949;
+		}
+		.footer{
+			overflow: hidden;
+			color: #494949;
+		}
+	</style>
+</head>
+<body>
+	<!--HEADING-->
+	<div class="text-center text-white display-4 heading">
+		<a href="home.html">Home Bakes</a>
+		<a href="home.html" class="sign btn btn-outline-light btn-sm float-right mr-5 mt-5">
+			<span class=""></span> Sign-in
+		</a>
+	</div>
+	<!--HEADING END-->
+
+	<!-- LOGIN STATUS START -->
+	<div class="container rounded text-white status">
+		<h3 id="stuts" class="stutstext text-center lead p-2"></h3>
+	</div>
+	<!-- LOGIN STATUS END -->
+	
+	<!--NEW LOGIN-->
+	<div class="container">
+		<div class="d-flex justify-content-center w-50 mx-auto">
+			<form class="form-horizontal form px-4 py-3 rounded shadow needs-validation" novalidate>
+				<div class="row form-inline form-group">
+					<div class="col-12 col-lg-5">
+						<label for="fname" class="control-label">Name :</label>
+					</div>
+					<div class="col-12 col-lg-7">
+						<input type="text" id="fname" class="form-control" placeholder="Enter Name" required>
+					</div>
+				</div>
+				<div class="row form-inline form-group">
+					<div class="col-12 col-lg-5">
+						<label for="phno" class="control-label">Phone :</label>
+					</div>
+					<div class="col-12 col-lg-7">
+						<input type="text" id="phno" class="form-control" pattern="[0-9]{0,10000000000}" maxlength="10" placeholder="Mobile Number"  required>
+					</div>
+				</div>
+				<div class="row form-inline form-group">
+					<div class="col-12 col-lg-5">
+						<label for="mail" class="control-label">Email:</label>
+					</div>
+					<div class="col-12 col-lg-7">
+						<input type="email" id="mail" class="form-control" placeholder="@gmail.com" required>
+						<div class="invalid-feedback">only gmail accept</div>
+					</div>
+				</div>
+				<div class="row form-inline form-group">
+					<div class="col-12 col-lg-5">
+						<label for="pswd" class="control-label">Password:</label>
+					</div>
+					<div class="col-12 col-lg-7">
+						<input type="password" id="pswd" class="form-control" placeholder="Min 8 charactors" required>
+					</div>
+				</div>
+				<div class="row form-inline form-group">
+					<div class="col-12 col-lg-5">
+						<label for="cpswd" class="control-label">Conform Password:</label>
+					</div>
+					<div class="col-12 col-lg-7">
+						<input type="password" id="cpswd" class="form-control" placeholder="Enter same password" required>
+					</div>
+				</div>
+				<div class="row form-inline form-group ">
+					<div class="col-lg-6 col-12">
+						<button id="createButton" type="button" class="btn btn-success mt-3 w-100" onclick="return list()">Create </button>
+					</div>
+					<div class="col-lg-6 col-12">
+						<button type="button" class="btn btn-warning mt-3 w-100">Cancel</button>
+					</div>
+				</div>
+				<div class="row form-inline form-group text-center">
+					<div class="col">
+						<a href="home.html" class="btn btn-outline-info w-100 font-italic">I'm Already Home Bakes User</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!--NEW LOGIN END-->
+
+
+	<!-- JS PART START -->
+	<script>
+		let aList=[];
+		const list =(ev)=>{
+			name = document.getElementById('fname').value,
+			phno = document.getElementById('phno').value,
+			mail = document.getElementById('mail').value,
+			pss = document.getElementById('pswd').value,
+			cpss = document.getElementById('cpswd').value
+
+			// NAME VALIDATION
+			if (name.length == 0 || name == " " || name.length <= 3 || name.length >= 11) {
+				alert("Invalid Name : \n Name block cannot be Empty \n min 3 char & max 10 char");
+				return false;
+			}
+			// NAME VALIDATION END
+			// PHONE VALIDATION
+			if (phno == " " || phno.length != 10  ) {
+				alert("Enter Valid Phone number");
+				return false;
+			}
+			// PHONE VALIDATION END
+			// MAIL VALIDATION
+			if (mail.length == 0 || mail == " " || mail.substr(-10) != "@gmail.com" || mail.length <= 14) {
+				alert("Invalid Mail Id");
+				return false;
+			}
+			// MAIL VALIDATION END
+			// PSSWORD VALIDATION START
+			if(pss.length < 8){
+				alert("Passwor must be min 8 char");
+				return false;
+			}
+			if (cpss != pss) {
+				alert("You entered password is not same");
+				return false;
+			}
+			// PSSWORD LOGIN END
+			let oList={
+				Name : name,
+				Phnoe : phno,
+				Mail : mail,
+				Pswrd : pss,
+				CPswrd : cpss
+			}
+			aList.push(oList);
+			document.getElementById('stuts').innerHTML='Account created Sucuessfully \n Go to Login page ';
+			document.forms[0].reset();
+			localStorage.setItem('newlogin',JSON.stringify(aList));
+			console.warn("added",{aList});
+			
+		}
+	</script>
+
+	<!-- VALIDATION CHECK -->
+	<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+	<!-- VALIDATION CHECK END -->
+	<!-- JS PART END -->
+
+	<!--Footer Section-->
+	<hr class="line">
+	<div class="text-center footer">
+		<p class="small mb-0">Copyrights<span class="far fa-copyright"></span> and Developed by Bhanuprakash</p>
+		<p class="small mt-0">From 2020</p>
+	</div>
+	<!--Footer Section End-->
+
+
+</body>
+</html>

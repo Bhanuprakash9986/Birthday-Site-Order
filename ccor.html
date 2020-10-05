@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="file:///G:/UI/UI_Coding/fontawesome-free-5.13.0-web/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lobster&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Tinos:ital,wght@1,700&display=swap" rel="stylesheet">
+	<title>CupCake-order</title>
+	<style>
+		body{
+			background-image: url("file:///G:/UI/UI_Coding/4_Bootstrap/project/img/wall2.jpg");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-attachment: fixed;
+		}
+		.heading{
+			font-family: 'Lobster', cursive;
+			text-decoration: none;
+			overflow: hidden;
+		}
+		a:link{
+			text-decoration: none;
+			color: black;
+		}
+		a:visited{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-decoration: none;
+			color: black;
+		}
+		a:active{
+			text-decoration: none;
+			color: black;
+		}
+		.sline{
+			width: 100%;
+            height: 1px;
+            margin: 0 auto;
+		}
+		.card:hover{
+  			transform: scale(1.1);
+  			transition-duration: 0.5s;
+  			filter: brightness(120%);
+		}
+		hr.line{
+			border:0.1px solid #494949;
+		}
+		.footer{
+			color: #494949;
+		}
+	</style>
+</head>
+<body>
+	<!--HEADING-->
+	<div class="container heading clearfit my-4">
+		<span class="display-4 float-left">
+			<a href="home.html">Home Bakes</a>
+		</span>
+		<span class="float-right mt-4">
+			<p class="lead">Taste of Mom made Bake</p>
+		</span>
+	</div>
+	<!--HEADING END-->
+
+	<!--ORDER CONTENT-->
+	<div class="container">
+		<!-- HEADING -->
+		<div class="row">
+			<div class="col sline bg-dark mt-3 ml-5"></div>
+			<div class="col">
+				<div class="text-center lead font-italic">CupCakes</div>
+			</div>
+			<div class="col sline bg-dark mt-3 mr-5"></div>
+		</div>
+		<!-- HEADING END -->
+		<div class="row my-5">
+			<!--CAKE ONE-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc1.jpg" alt="ccake1" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name()">Cupcake1</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE ONE END-->
+
+			<!--CAKE TWO-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc2.jpg" alt="ccake2" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname1">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name1()">Cupcake2</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE TWO END-->
+
+			<!--CAKE THREE-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc3.jpg" alt="cc3" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname2">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name2()">Cupcake3</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE THREE END-->
+
+			<!--CAKE FOUR-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc4.jpg" alt="cc4" height="220" width="220">
+					<div class="card-footer  text-dark font-italic" id="cname3">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name3()">Cupcake4</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE FOUR END-->
+
+			<!--CAKE FIVE-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc5.jpg" alt="cc5" height="220" width="220">
+					<div class="card-footer  text-dark font-italic" id="cname4">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name4()">Cupcake5</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE FIVE END-->
+
+			<!--CAKE SIX-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc6.jpg" alt="cc6" height="220" width="220">
+					<div class="card-footer  text-dark font-italic" id="cname5">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name5()">Cupcake6</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE SIX END-->
+
+			<!--CAKE SEVEN-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc7.jpg" alt="cc7" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname6">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name6()">Cupcake7</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE SEVEN END-->
+
+			<!--CAKE EIGHT-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc8.jpg" alt="cc8" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname7">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name7()">Cupcake8</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE EIGHT END-->
+
+			<!--CAKE NINE-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc9.jpg" alt="cc9" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname8">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name8()">Cupcake9</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE NINE END-->
+
+			<!--CAKE TEN-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc10.jpg" alt="cc10" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname9">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name9()">Cupcake10</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE TEN END-->
+
+			<!--CAKE ELEVEN-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc11.jpg" alt="cc11" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname10">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name10()">Cupcake11</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE ELEVEN END-->
+
+			<!--CAKE 12-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc12.jpg" alt="cc12" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname11">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name11()">Cupcake12</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE 12 END-->
+
+			<!--CAKE 13-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc13.jpg" alt="cc13" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname12">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name12()">Cupcake13</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE 13 END-->
+
+			<!--CAKE 14-->
+			<div class="col-6 col-md-4 col-lg-3 mb-4">
+				<div class="card shadow-lg">
+					<img class="card-img-top" src="file:///G:/UI/UI_Coding/4_Bootstrap/project/mainimg/cupcake/cc14.jpg" alt="cc14" height="220" width="220">
+					<div class="card-footer text-dark font-italic" id="cname13">
+						<a href="order.html" title="For order click">
+							<p class="card-title stretched-link" onclick="name13()">Cupcake14</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<!--CAKE 14 END-->
+
+		</div>	
+	</div>
+	<!--ORDER CONTENT END-->
+
+	<!-- MAIN SCRIPT START -->
+	<script>
+		function name(){
+			var cardName = document.getElementById('cname');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name1(){
+			var cardName = document.getElementById('cname1');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name2(){
+			var cardName = document.getElementById('cname2');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name3(){
+			var cardName = document.getElementById('cname3');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name4(){
+			var cardName = document.getElementById('cname4');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name5(){
+			var cardName = document.getElementById('cname5');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name6(){
+			var cardName = document.getElementById('cname6');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name7(){
+			var cardName = document.getElementById('cname7');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name8(){
+			var cardName = document.getElementById('cname8');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name9(){
+			var cardName = document.getElementById('cname9');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name10(){
+			var cardName = document.getElementById('cname10');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name11(){
+			var cardName = document.getElementById('cname11');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name12(){
+			var cardName = document.getElementById('cname12');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+		function name13(){
+			var cardName = document.getElementById('cname13');
+			var fcardName = cardName.getElementsByTagName("p");
+			var str =JSON.stringify({"Name":fcardName[0].innerHTML});
+			localStorage.setItem('cardName',str);
+		}
+	</script>
+	<!-- MAIN SCRIPT END -->
+
+	<!--POPOVER SCRIPT-->
+	<script>
+		$(document).ready(function(){
+  			$('[data-toggle="tooltip"]').tooltip();
+		});
+	</script>
+	<!--POPOVER SCRIPT-->
+
+	<!--Footer Section-->
+	<hr class="line">
+	<div class="text-center footer">
+		<p class="small mb-0">Copyrights<span class="far fa-copyright"></span> and Developed by Bhanuprakash</p>
+		<p class="small mt-0">From 2020</p>
+	</div>
+	<!--Footer Section End-->
+
+
+</body>
+</html>
